@@ -30,7 +30,6 @@ public class backgContorller : MonoBehaviour
     void Update()
     {
         v2_offset.x = xVel;
-        Debug.Log(v2_offset);
 
         if (xVel != 0)
         {
