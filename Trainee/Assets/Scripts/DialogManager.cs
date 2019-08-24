@@ -12,6 +12,7 @@ public class DialogManager : MonoBehaviour
     private DialogScriptableObject Dialog;
     private FadeIn fadeIn;
     private FadeOut fadeOut;
+    public GameObject DialogButton;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialog(DialogScriptableObject dialogScriptableObject)
     {
+        DialogButton.SetActive(true);
         Dialog = dialogScriptableObject;
         fadeIn.StartFadeing();
         nameNpc.text = Dialog.npcName;
@@ -61,6 +63,7 @@ public class DialogManager : MonoBehaviour
         nameNpc.text = "";
         Debug.Log("End");
         fadeOut.StartFadeing();
+        DialogButton.SetActive(false);
 
     }
 
