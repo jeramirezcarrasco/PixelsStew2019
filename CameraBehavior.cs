@@ -12,7 +12,7 @@ public class CameraBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _offset = player.transform.position - transform.position;
+        _offset = transform.position - player.transform.position;
     }
 
     // Update is called once per frame
