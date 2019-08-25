@@ -16,3 +16,4 @@ MonoBehaviour:
   textDialog: "Throw to the right bin or you\u2019ll never retire.\r\n"
   nextSentences:
   - {fileID: 11400000, guid: 0953db312a0eeeb43b2cf3c578c97904, type: 2}
+  EventTrigger: Milk1_3

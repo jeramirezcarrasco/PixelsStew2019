@@ -20,6 +20,7 @@ public class FadeIn : MonoBehaviour
 
     IEnumerator FadeIN()
     {
+        Debug.Log("FadeIng");
         for (float f = 0.05f; f <= 1; f += 0.05f)
         {
             Color c = rend.material.color;

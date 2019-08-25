@@ -16,3 +16,4 @@ MonoBehaviour:
   textDialog: Trash picking is part of our job.
   nextSentences:
   - {fileID: 11400000, guid: 2a673a53139d06349ae95eb3ede99886, type: 2}
+  EventTrigger: Milk1_2

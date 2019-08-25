@@ -1,5 +1,6 @@
 # folders
 Trainee/[Ll]ibrary/*
+Trainee\[Ll]ibrary\*
 Trainee/[Tt]emp/*
 Trainee/[Oo]bj/*
 Trainee/[Bb]uild/*
