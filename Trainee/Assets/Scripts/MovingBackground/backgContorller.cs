@@ -10,7 +10,7 @@ public class backgContorller : MonoBehaviour
     Material material;
 
     // Variables
-    public int xVel;
+    public float xVel;
 
     Vector2 v2_offset;
 
