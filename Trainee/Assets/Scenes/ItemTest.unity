@@ -718,7 +718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   b_holding: 0
   _item: {fileID: 0}
-  _holdspot: {fileID: 0}
+  _holdspot: {fileID: 72070183}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 256
