@@ -14,7 +14,7 @@ public class ObstructBlock : MonoBehaviour
 
     //External Refs
     Camera _myCam;
-    
+
     //vars
     bool im_overlapped;
 
@@ -32,7 +32,7 @@ public class ObstructBlock : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<ObstructBlock>())
+        if (other.gameObject.GetComponent<ObstructBlock>() && !currentCollissions.Contains(other.gameObject))
         {
             currentCollissions.Add(other.gameObject);
 
