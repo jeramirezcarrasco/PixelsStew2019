@@ -16,3 +16,4 @@ MonoBehaviour:
   textDialog: "Anything but that! Retirement is my life goal.\r\n\n"
   nextSentences:
   - {fileID: 11400000, guid: c34cf87358efe1441a678286b4ead8a0, type: 2}
+  EventTrigger: Milk1_4

@@ -15,3 +15,4 @@ MonoBehaviour:
   npcName: BRANCH MANAGER
   textDialog: "Then let\u2019s see what you\u2019re made of.\r\n\n"
   nextSentences: []
+  EventTrigger: Milk1_5

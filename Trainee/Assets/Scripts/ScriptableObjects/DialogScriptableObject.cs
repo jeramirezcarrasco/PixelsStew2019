@@ -9,6 +9,7 @@ public class DialogScriptableObject : ScriptableObject
     [SerializeField] public string npcName;
     [TextArea(10, 14)] [SerializeField] public string textDialog;
     [SerializeField] public DialogScriptableObject[] nextSentences;
+    [SerializeField] public string EventTrigger;
 
 
 }

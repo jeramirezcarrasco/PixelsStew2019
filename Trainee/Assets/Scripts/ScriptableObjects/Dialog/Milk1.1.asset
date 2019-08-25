@@ -16,3 +16,4 @@ MonoBehaviour:
   textDialog: " \rHeard from the big boss that a newbie was coming.\r\n"
   nextSentences:
   - {fileID: 11400000, guid: 81219699a82579041afa439925b52f1f, type: 2}
+  EventTrigger: Milk1_1

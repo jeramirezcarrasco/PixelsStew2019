@@ -22,6 +22,7 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialog(DialogScriptableObject dialogScriptableObject)
     {
+        StopAllCoroutines();
         DialogButton.SetActive(true);
         Dialog = dialogScriptableObject;
         fadeIn.StartFadeing();
@@ -38,9 +39,7 @@ public class DialogManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("aaaaaaaaaa");
             Dialog = Dialog.nextSentences[0];
-            Debug.Log(Dialog.textDialog);
             StopAllCoroutines();
             nameNpc.text = Dialog.npcName;
             StartCoroutine(TypeSentence(Dialog.textDialog));
@@ -49,6 +48,8 @@ public class DialogManager : MonoBehaviour
 
     IEnumerator TypeSentence(string Sentence)
     {
+        Debug.Log(Sentence);
+        yield return new WaitForSeconds(0.1f);
         sentenceBox.text = "";
         foreach (char letter in Sentence.ToCharArray())
         {
@@ -61,11 +62,13 @@ public class DialogManager : MonoBehaviour
     {
         sentenceBox.text = "";
         nameNpc.text = "";
-        Debug.Log("End");
         fadeOut.StartFadeing();
         DialogButton.SetActive(false);
+        EventManager.TriggerEvent(Dialog.EventTrigger);
+        StopAllCoroutines();
+
 
     }
 
-    
+
 }
