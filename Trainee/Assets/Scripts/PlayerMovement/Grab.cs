@@ -20,6 +20,8 @@ public class Grab : MonoBehaviour
     {
 
     }
+
+    // Public Method to retrieve the name of the ID just in case we require it.
     public string retrieveItemID()
     {
         if (_item != null)
