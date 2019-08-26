@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Zoey
   textDialog: "I\u2019m pawsitive that you\u2019ll be able to find one!"
-  nextSentences: []
+  nextSentences:
+  - {fileID: 11400000, guid: 5e6a4912c411b3e41bc9a2eca9bfab51, type: 2}
   EventTrigger: 

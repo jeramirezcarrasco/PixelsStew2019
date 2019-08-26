@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Executive Trainee
   textDialog: Only if I can find a pencil and eraser.
-  nextSentences: []
+  nextSentences:
+  - {fileID: 11400000, guid: d010b4c8f54539d41bd99007a91516ef, type: 2}
   EventTrigger: 
