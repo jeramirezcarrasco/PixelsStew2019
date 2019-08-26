@@ -12,16 +12,6 @@ public class Grab : MonoBehaviour
 
     public LayerMask m_LayerMask;
 
-    // possible place the item beside the player
-
-    // Start is called before the first frame update
-
-    void Start()
-    {
-
-    }
-
-    // Public Method to retrieve the name of the ID just in case we require it.
     public string retrieveItemID()
     {
         if (_item != null)
@@ -34,7 +24,6 @@ public class Grab : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && b_holding == false)
@@ -55,8 +44,11 @@ public class Grab : MonoBehaviour
                     }
                 }
             }
-            if (Input.GetKeyDown(KeyCode.E) && _item != null)
+            if (_item != null)
             {
+                _item.gameObject.transform.parent = gameObject.transform;
+
+                _item.body.gravityScale = 0;
                 b_holding = true;
                 _locked = true;
             }
@@ -65,15 +57,19 @@ public class Grab : MonoBehaviour
 
         else if (b_holding == true)
         {
-            if (Input.GetKeyDown(KeyCode.E)&&_item != null)
+            if (Input.GetKeyDown(KeyCode.E) && _item != null)
             {
-                _item= null; 
+                _item.body.gravityScale = 1;
+                _item.gameObject.transform.parent = null;
+                _item = null;
                 b_holding = false;
                 _locked = false;
             }
         }
 
-
+    }
+    private void FixedUpdate()
+    {
         if (b_holding)
         {
             _item.gameObject.transform.position = _holdspot.position;
