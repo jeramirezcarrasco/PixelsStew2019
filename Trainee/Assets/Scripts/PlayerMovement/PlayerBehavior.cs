@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerBehavior : MonoBehaviour
 {
-    public float moveSpeed;
+    public float moveSpeed = 10.0f;
 
     [SerializeField] bool AlternativeMove = true;
 
@@ -20,9 +20,7 @@ public class PlayerBehavior : MonoBehaviour
 
     private Vector3 m_Velocity = Vector3.zero;
 
-    [Range(0, .3f)] [SerializeField] private float m_faSmoothing = .187f;
-
-
+    [Range(0, .3f)] [SerializeField] private float m_faSmoothing = 0.069f;
 
     public bool CanMove { get => m_canMove; set => m_canMove = value; }
 

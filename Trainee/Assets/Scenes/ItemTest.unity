@@ -324,7 +324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 72070183}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HoldSpot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -872,6 +872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1165114301}
   smoothTime: 0.5
+  CamaraYOfsset: 0
 --- !u!1 &1118133327
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,7 +943,7 @@ GameObject:
   - component: {fileID: 1165114304}
   - component: {fileID: 1165114303}
   - component: {fileID: 1165114302}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1963,6 +1964,7 @@ MonoBehaviour:
   nameNpc: {fileID: 6047925290202468260}
   sentenceBox: {fileID: 6047925289966634067}
   DialogButton: {fileID: 6047925289830292520}
+  Player: {fileID: 0}
 --- !u!114 &6047925291043450214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1977,6 +1979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rend: {fileID: 6047925290959547932}
   fadeTimer: 0.03
+  StartFaded: 0
 --- !u!114 &6047925291043450215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1991,6 +1994,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rend: {fileID: 6047925290959547932}
   fadeTimer: 0.03
+  StartFaded: 0
+  completeFadeIN: 0
 --- !u!1 &6047925291225654346
 GameObject:
   m_ObjectHideFlags: 0
