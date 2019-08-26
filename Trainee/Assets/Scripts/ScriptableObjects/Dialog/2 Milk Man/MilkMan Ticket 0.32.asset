@@ -15,7 +15,7 @@ MonoBehaviour:
   npcName: Moork Cow
   textDialog: "I think I\u2019m ready for my stop.\r\n"
   nextSentences:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: f001336bca70392428cc75394eaa09f5, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

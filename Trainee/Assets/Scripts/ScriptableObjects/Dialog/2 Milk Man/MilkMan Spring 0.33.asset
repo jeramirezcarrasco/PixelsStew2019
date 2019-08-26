@@ -15,5 +15,5 @@ MonoBehaviour:
   npcName: Moork Cow
   textDialog: Just the way I like it, taking it slow.
   nextSentences:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 3836af3e77c837a42a4f0eff92263a75, type: 2}
   EventTrigger: 
