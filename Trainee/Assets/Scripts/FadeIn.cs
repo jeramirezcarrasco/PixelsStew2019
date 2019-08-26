@@ -7,27 +7,49 @@ public class FadeIn : MonoBehaviour
 {
     [SerializeField] SpriteRenderer rend;
     [SerializeField] float fadeTimer;
+    [SerializeField] bool StartFaded;
+    [SerializeField] bool completeFadeIN;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-        Color c = rend.material.color;
-        c.a = 0f;
-        rend.material.color = c;
+        if (StartFaded)
+        {
+            Color c = rend.material.color;
+            c.a = 0f;
+            rend.material.color = c;
+        }
+        else
+        {
+            Color c = rend.material.color;
+        }
+       
 
     }
 
     IEnumerator FadeIN()
     {
-        Debug.Log("FadeIng");
-        for (float f = 0.05f; f <= 1; f += 0.05f)
+        if (completeFadeIN)
         {
-            Color c = rend.material.color;
-            c.a = f;
-            rend.material.color = c;
-            yield return new WaitForSeconds(fadeTimer);
+            for (float f = 0.05f; f <= 1.1; f += 0.05f)
+            {
+                Color c = rend.material.color;
+                c.a = f;
+                rend.material.color = c;
+                yield return new WaitForSeconds(fadeTimer);
+            }
         }
+        else
+        {
+            for (float f = 0.05f; f <= 1; f += 0.05f)
+            {
+                Color c = rend.material.color;
+                c.a = f;
+                rend.material.color = c;
+                yield return new WaitForSeconds(fadeTimer);
+            }
+        }
+        
 
     }
 

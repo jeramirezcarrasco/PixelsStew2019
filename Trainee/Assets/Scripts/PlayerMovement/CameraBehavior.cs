@@ -8,6 +8,7 @@ public class CameraBehavior : MonoBehaviour
     Vector3 _offset;
     Vector3 _velocity = Vector3.zero;
     public float smoothTime;
+    [SerializeField] float CamaraYOfsset;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class CameraBehavior : MonoBehaviour
     void FollowPlayer()
     {
         Vector3 _targetPosition = player.transform.position + _offset;
+        _targetPosition = new Vector3(_targetPosition.x, _targetPosition.y + CamaraYOfsset, _targetPosition.z);
         transform.position = Vector3.SmoothDamp(transform.position, _targetPosition, ref _velocity, smoothTime);
     }
 }

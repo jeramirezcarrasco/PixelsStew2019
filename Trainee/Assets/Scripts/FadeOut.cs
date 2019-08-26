@@ -7,13 +7,21 @@ public class FadeOut : MonoBehaviour
 {
     [SerializeField] SpriteRenderer rend;
     [SerializeField] float fadeTimer;
+    [SerializeField] bool StartFaded;
 
     // Start is called before the first frame update
     void Start()
     {
-        Color c = rend.material.color;
-        c.a = 0f;
-        rend.material.color = c;
+        if (StartFaded)
+        {
+            Color c = rend.material.color;
+            c.a = 0f;
+            rend.material.color = c;
+        }
+        else
+        {
+            Color c = rend.material.color;
+        }
 
     }
 
