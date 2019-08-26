@@ -19,11 +19,9 @@ public class EventsFlags : MonoBehaviour
     }
     private void OnEnable()
     {
-        EventManager.StartListening("Milk1_1", Milk1_1);
-        EventManager.StartListening("Milk1_2", Milk1_2);
-        EventManager.StartListening("Milk1_3", Milk1_3);
-        EventManager.StartListening("Milk1_4", Milk1_4);
-        EventManager.StartListening("Milk1_5", Milk1_5);
+        EventManager.StartListening("Tutorial1", Tutorial1);
+        EventManager.StartListening("Tutorial2", Tutorial2);
+        EventManager.StartListening("Tutorial3", Tutorial3);
 
     }
 
@@ -31,14 +29,25 @@ public class EventsFlags : MonoBehaviour
     {
         Debug.Log("aaaaaaaaaaaaaaaa");
 
-        EventManager.StopListening("Milk1_1", Milk1_1);
-        EventManager.StopListening("Milk1_2", Milk1_2);
-        EventManager.StopListening("Milk1_3", Milk1_3);
-        EventManager.StopListening("Milk1_4", Milk1_4);
-        EventManager.StopListening("Milk1_5", Milk1_5);
+        EventManager.StopListening("Tutorial1", Tutorial1);
+        EventManager.StopListening("Tutorial2", Tutorial2);
+        EventManager.StopListening("Tutorial3", Tutorial3);
+
+
     }
 
-    void Milk1_1()
+    void Tutorial1()
+    {
+        Debug.Log("Tutorial1");
+        GameObject thisObject = null;
+        if (gameComponentDictionary.TryGetValue("Tutorial1", out thisObject))
+        {
+            thisObject.GetComponent<DialogTrigger>().IncrementIndex();
+            thisObject.transform.GetChild(2).gameObject.SetActive(true);
+        }
+    }
+
+    void Tutorial2()
     {
         Debug.Log("INCREMNETAL");
         GameObject thisObject = null;
@@ -49,46 +58,18 @@ public class EventsFlags : MonoBehaviour
         }
     }
 
-    void Milk1_2()
+    void Tutorial3()
     {
+        Debug.Log("INCREMNETAL");
         GameObject thisObject = null;
-        if (gameComponentDictionary.TryGetValue("Milk1_2", out thisObject))
+        if (gameComponentDictionary.TryGetValue("Milk1_1", out thisObject))
         {
             thisObject.GetComponent<DialogTrigger>().IncrementIndex();
             StartCoroutine("WaitForBussy", thisObject);
         }
     }
 
-    void Milk1_3()
-    {
-        GameObject thisObject = null;
-        if (gameComponentDictionary.TryGetValue("Milk1_3", out thisObject))
-        {
-            thisObject.GetComponent<DialogTrigger>().IncrementIndex();
-            StartCoroutine("WaitForBussy", thisObject);
-        }
-    }
 
-    void Milk1_4()
-    {
-        GameObject thisObject = null;
-        if (gameComponentDictionary.TryGetValue("Milk1_4", out thisObject))
-        {
-            thisObject.GetComponent<DialogTrigger>().IncrementIndex();
-            StartCoroutine("WaitForBussy", thisObject);
-        }
-    }
-
-    void Milk1_5()
-    {
-        GameObject thisObject = null;
-        if (gameComponentDictionary.TryGetValue("Milk1_5", out thisObject))
-        {
-            thisObject.GetComponent<DialogTrigger>().IncrementIndex();
-            StartCoroutine("WaitForBussy", thisObject);
-
-        }
-    }
 
     IEnumerator WaitForBussy(GameObject thisObject)
     {

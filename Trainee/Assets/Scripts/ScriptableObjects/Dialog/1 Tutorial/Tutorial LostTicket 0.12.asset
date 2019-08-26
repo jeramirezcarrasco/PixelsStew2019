@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Branch Manager
   textDialog: Good luck on the job!
-  nextSentences:
-  - {fileID: 0}
-  EventTrigger: 
+  nextSentences: []
+  EventTrigger: Tutorial3

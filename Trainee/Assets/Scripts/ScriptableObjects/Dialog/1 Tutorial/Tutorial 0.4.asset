@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Branch Manager
   textDialog: "Then let\u2019s see what you\u2019re made of."
-  nextSentences:
-  - {fileID: 11400000, guid: 6c7ca0cae1a6e9c43a32b0efdc32673c, type: 2}
-  EventTrigger: 
+  nextSentences: []
+  EventTrigger: Tutorial1

@@ -980,10 +980,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81ba6ec7f55fe5449b8ff30812fcd236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  AlternativeMove: 1
-  MaxSpeed: 500
-  m_faSmoothing: 0.069
 --- !u!50 &1165114304
 Rigidbody2D:
   serializedVersion: 4
@@ -1443,7 +1439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &6047925289830292520
 GameObject:
   m_ObjectHideFlags: 0
