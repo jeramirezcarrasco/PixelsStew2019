@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05a4373b90e00fe488338171c330c3c1, type: 3}
-  m_Name: RC Speakers 0.0
+  m_Name: RC meet-cat 0.5
   m_EditorClassIdentifier: 
-  npcName: 
-  textDialog: Thank you for your good work.
-  nextSentences:
-  - {fileID: 11400000, guid: 415af55b53157a445aaa9e129dd8efee, type: 2}
+  npcName: Runaway Cat
+  textDialog: I can only give you my diary and ticket right meow.
+  nextSentences: []
   EventTrigger: 

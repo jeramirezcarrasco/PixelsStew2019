@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05a4373b90e00fe488338171c330c3c1, type: 3}
-  m_Name: RC Speakers 0.0
+  m_Name: RC meet-cat 0.2
   m_EditorClassIdentifier: 
-  npcName: 
-  textDialog: Thank you for your good work.
+  npcName: Runaway Cat
+  textDialog: "I\u2019m not Zoey Cat!"
   nextSentences:
-  - {fileID: 11400000, guid: 415af55b53157a445aaa9e129dd8efee, type: 2}
+  - {fileID: 11400000, guid: 357dfe0f0d8182544b98748ff0ca4d24, type: 2}
   EventTrigger: 
