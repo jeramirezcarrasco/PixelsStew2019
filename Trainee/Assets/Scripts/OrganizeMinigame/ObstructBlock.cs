@@ -90,15 +90,12 @@ public class ObstructBlock : MonoBehaviour
     private void OnMouseUp()
     {
         grabbed = false;
-
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-
         if (other.gameObject.GetComponent<ObstructBlock>())
         {
             currentCollissions.Remove(other.gameObject);
-
 
             if (currentCollissions.Count == 0)
             {

@@ -23,8 +23,6 @@ public class FadeIn : MonoBehaviour
         {
             Color c = rend.material.color;
         }
-       
-
     }
 
     IEnumerator FadeIN()
