@@ -344,6 +344,7 @@ GameObject:
   - component: {fileID: 1043262953}
   - component: {fileID: 1043262955}
   - component: {fileID: 1043262958}
+  - component: {fileID: 1043262959}
   m_Layer: 0
   m_Name: blockobj
   m_TagString: Untagged
@@ -363,6 +364,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36c7264f7a2235a4b8c6506ab9fa8768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_confict:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
   currentCollissions: []
 --- !u!60 &1043262954
 PolygonCollider2D:
@@ -495,6 +510,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.6
+--- !u!114 &1043262959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043262952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 412bd8e750592b34d828f55afa799e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: WATER
+  body: {fileID: 0}
 --- !u!1 &1812003221
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,6 +831,7 @@ GameObject:
   - component: {fileID: 2038506786}
   - component: {fileID: 2038506785}
   - component: {fileID: 2038506784}
+  - component: {fileID: 2038506790}
   m_Layer: 0
   m_Name: blockobj (1)
   m_TagString: Untagged
@@ -858,6 +888,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36c7264f7a2235a4b8c6506ab9fa8768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_confict:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
   currentCollissions: []
 --- !u!60 &2038506787
 PolygonCollider2D:
@@ -953,3 +997,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10.218}
+--- !u!114 &2038506790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038506783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 412bd8e750592b34d828f55afa799e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: WATER
+  body: {fileID: 0}

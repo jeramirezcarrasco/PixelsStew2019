@@ -12,6 +12,8 @@ public class ObstructBlock : MonoBehaviour
     PolygonCollider2D _collider;
     SpriteRenderer _renderer;
 
+    public ContactFilter2D m_confict;
+
     //External Refs
     Camera _myCam;
 
@@ -53,7 +55,29 @@ public class ObstructBlock : MonoBehaviour
         {
             Vector3 desired = RetrieveMousePos() - rb2_body.position;
 
-            rb2_body.AddForce(desired.normalized * 80, ForceMode2D.Force);
+            // rb2_body.AddForce(desired.normalized * 100, ForceMode2D.Force);
+        }
+        List<Collider2D> results = new List<Collider2D>();
+        Physics2D.OverlapCollider(GetComponent<PolygonCollider2D>(), m_confict, results);
+        bool overlapped = false;
+
+        for (int i = 0; i < results.Count; i++)
+        {
+            if (results[i].gameObject.GetComponent<a_pickupItem>() && results.Contains(results[i]))
+            {
+                // currentCollissions.Add(results[i].gameObject);
+
+                _renderer.color = Color.red;
+
+                im_overlapped = true;
+                overlapped = true;
+            }
+
+        }
+
+        if (!overlapped)
+        {
+            _renderer.color = Color.green;
         }
     }
     bool grabbed;
