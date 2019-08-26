@@ -60,3 +60,9 @@ TagManager:
   - name: OuterWall
     uniqueID: 2313597443
     locked: 0
+  - name: Animals
+    uniqueID: 2768059221
+    locked: 0
+  - name: Player
+    uniqueID: 1737213835
+    locked: 0

@@ -15,6 +15,7 @@ public class DialogTrigger : MonoBehaviour
         {
             if (activated && !bussy)
             {
+                Debug.Log("CLick");
                 FindObjectOfType<DialogManager>().StartDialog(dialogObject[index]);
                 bussy = true;
             }
