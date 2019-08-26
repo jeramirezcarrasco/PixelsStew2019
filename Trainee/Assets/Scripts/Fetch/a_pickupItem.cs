@@ -20,4 +20,15 @@ public class a_pickupItem : MonoBehaviour
         body = gameObject.GetComponent<Rigidbody2D>();
     }
 
+
+    private void OnDestroy()
+    {
+        if (transform.parent != null)
+        {
+            if (transform.parent.GetComponent<Grab>())
+            {
+                transform.parent.GetComponent<Grab>().DropItem();
+            }
+        }
+    }
 }

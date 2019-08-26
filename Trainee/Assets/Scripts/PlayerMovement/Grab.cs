@@ -46,11 +46,7 @@ public class Grab : MonoBehaviour
             }
             if (_item != null)
             {
-                _item.gameObject.transform.parent = gameObject.transform;
-
-                _item.body.gravityScale = 0;
-                b_holding = true;
-                _locked = true;
+                OwnItem();
             }
 
         }
@@ -59,20 +55,42 @@ public class Grab : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E) && _item != null)
             {
-                _item.body.gravityScale = 1;
                 _item.gameObject.transform.parent = null;
-                _item = null;
-                b_holding = false;
-                _locked = false;
+
+                _item.body.AddForce(gameObject.GetComponent<Rigidbody2D>().velocity * .85f, ForceMode2D.Impulse);
+                DropItem();
             }
         }
 
-    }
-    private void FixedUpdate()
-    {
         if (b_holding)
         {
-            _item.gameObject.transform.position = _holdspot.position;
+            _item.body.position = _holdspot.position;
         }
+
+    }
+
+    private void OwnItem()
+    {
+        _item.gameObject.transform.parent = gameObject.transform;
+        _item.body.gravityScale = 0;
+        b_holding = true;
+        _locked = true;
+    }
+
+    public void DropItem()
+    {
+        _item.body.gravityScale = 1;
+        _item = null;
+        b_holding = false;
+        _locked = false;
+    }
+    /// <summary>
+    /// Update is called every frame, if the MonoBehaviour is enabled.
+    /// </summary>
+
+
+    private void FixedUpdate()
+    {
+
     }
 }
