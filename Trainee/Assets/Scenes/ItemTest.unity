@@ -983,7 +983,7 @@ MonoBehaviour:
   moveSpeed: 10
   AlternativeMove: 1
   MaxSpeed: 500
-  m_faSmoothing: 0.179
+  m_faSmoothing: 0.069
 --- !u!50 &1165114304
 Rigidbody2D:
   serializedVersion: 4
