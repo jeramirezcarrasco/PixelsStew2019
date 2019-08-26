@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05a4373b90e00fe488338171c330c3c1, type: 3}
-  m_Name: MilkMan Winter 3.34
+  m_Name: Chicken Item-Diary 0.40
   m_EditorClassIdentifier: 
-  npcName: Moork Cow
-  textDialog: "I\u2019m good at milking time."
+  npcName: Doodle Do
+  textDialog: "M\u2019future is now in yer hands."
   nextSentences: []
   EventTrigger: 

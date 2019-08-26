@@ -10,13 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05a4373b90e00fe488338171c330c3c1, type: 3}
-  m_Name: MilkMan Ticket 0.32
+  m_Name: Chicken Item-Diary 0.38
   m_EditorClassIdentifier: 
-  npcName: Moork Cow
-  textDialog: "I think I\u2019m ready for my stop.\r\n"
+  npcName: Doodle Do
+  textDialog: "But m\u2019stop is soon.\r\n"
   nextSentences:
-  - {fileID: 11400000, guid: f001336bca70392428cc75394eaa09f5, type: 2}
-  - {fileID: 11400000, guid: 3dd4fb04d40aa1c46b08efedd0bcb8c8, type: 2}
-  - {fileID: 11400000, guid: 1e78c210dd4355445a654238229a6700, type: 2}
-  - {fileID: 11400000, guid: abab9a86de562dc4fb00a398af70f2b9, type: 2}
+  - {fileID: 11400000, guid: bc85205c33851464eb89c2ab2e055377, type: 2}
   EventTrigger: 
