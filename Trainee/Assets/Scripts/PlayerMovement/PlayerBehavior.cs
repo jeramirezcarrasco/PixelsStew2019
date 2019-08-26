@@ -5,14 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerBehavior : MonoBehaviour
 {
-<<<<<<< HEAD
-    public float moveSpeed;
-    private bool FacingRight;
-    float Horizontal;
-    // Start is called before the first frame update
-    void Start()
-    {
-=======
     public float moveSpeed = 10.0f;
 
     [SerializeField] bool AlternativeMove = true;
@@ -39,30 +31,30 @@ public class PlayerBehavior : MonoBehaviour
     {
         //Populate Our Rigidbody
         m_body = gameObject.GetComponent<Rigidbody2D>();
->>>>>>> 70791e100209c335819539e7cf5e7e847bfecc0d
 
     }
 
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
-        Movement();
-        float Horizontal = Input.GetAxis("Horizontal");
-        if (Horizontal > 0)
+
+        if (Input.GetAxis("Horizontal") < 0)
         {
             Vector3 characterScale = transform.localScale;
-            characterScale.x = -1;
+
+            characterScale.x = 0.76686f;
             transform.localScale = characterScale;
 
         }
-        else if (Horizontal < 0)
+        if (Input.GetAxis("Horizontal") > 0)
         {
             Vector3 characterScale = transform.localScale;
-            characterScale.x = 1;
+
+            characterScale.x = -0.76686f;
             transform.localScale = characterScale;
 
-=======
+        }
+
         if (!AlternativeMove)
         {
             Movement();
@@ -70,7 +62,6 @@ public class PlayerBehavior : MonoBehaviour
         else
         {
             inputListener();
->>>>>>> 70791e100209c335819539e7cf5e7e847bfecc0d
         }
     }
 
@@ -82,14 +73,6 @@ public class PlayerBehavior : MonoBehaviour
         transform.Translate(_moveVector * moveSpeed * Time.deltaTime);
     }
 
-<<<<<<< HEAD
-    private void flip()
-    {
-
-    }
-
-    
-=======
 
 
     private void FixedUpdate()
@@ -119,5 +102,4 @@ public class PlayerBehavior : MonoBehaviour
             x_input = Input.GetAxis("Horizontal");
         }
     }
->>>>>>> 70791e100209c335819539e7cf5e7e847bfecc0d
 }
