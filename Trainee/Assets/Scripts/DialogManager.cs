@@ -10,8 +10,8 @@ public class DialogManager : MonoBehaviour
     public Text nameNpc;
     public Text sentenceBox;
     private DialogScriptableObject Dialog;
-    private FadeIn fadeIn;
-    private FadeOut fadeOut;
+    private FadeInUI fadeInUI;
+    private FadeOutUI fadeOutUI;
     private CameraZoom cameraZoom;
     public GameObject DialogButton;
     bool nextSentenceActive = false;
@@ -20,8 +20,8 @@ public class DialogManager : MonoBehaviour
 
     void Start()
     {
-        fadeIn = gameObject.GetComponent<FadeIn>();
-        fadeOut = gameObject.GetComponent<FadeOut>();
+        fadeInUI = gameObject.GetComponent<FadeInUI>();
+        fadeOutUI = gameObject.GetComponent<FadeOutUI>();
         cameraZoom = gameObject.GetComponent<CameraZoom>();
         Player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -41,7 +41,7 @@ public class DialogManager : MonoBehaviour
         nextSentenceActive = true;
         DialogButton.SetActive(nextSentenceActive);
         Dialog = dialogScriptableObject;
-        fadeIn.StartFadeing();
+        fadeInUI.StartFadeingUI();
         StartCoroutine(TypeSentence(Dialog.textDialog));
         cameraZoom.StartNewZoom();
     }
@@ -83,7 +83,7 @@ public class DialogManager : MonoBehaviour
     {
         sentenceBox.text = "";
         nameNpc.text = "";
-        fadeOut.StartFadeing();
+        fadeOutUI.StartFadeingUI();
         nextSentenceActive = false;
         DialogButton.SetActive(nextSentenceActive);
         Debug.Log(Dialog.EventTrigger);

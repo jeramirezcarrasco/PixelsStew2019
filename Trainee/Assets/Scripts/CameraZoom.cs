@@ -29,6 +29,7 @@ public class CameraZoom : MonoBehaviour
     {
         for (float i = newZoom; i < orinialZoom + 0.05f; i += 0.05f)
         {
+            
             camera.orthographicSize = i;
             yield return new WaitForSeconds(smooth);
         }

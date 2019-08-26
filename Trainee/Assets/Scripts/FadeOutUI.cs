@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FadeOut : MonoBehaviour
+public class FadeOutUI : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer rend;
+    [SerializeField] Image rend;
     [SerializeField] float fadeTimer;
     [SerializeField] bool StartFaded;
 
     // Start is called before the first frame update
     void Start()
     {
-      
         if (StartFaded)
         {
             Color c = rend.material.color;
@@ -35,10 +34,9 @@ public class FadeOut : MonoBehaviour
             rend.material.color = c;
             yield return new WaitForSeconds(fadeTimer);
         }
-
     }
 
-    public void StartFadeing()
+    public void StartFadeingUI()
     {
         StartCoroutine("FadeOUT");
     }
