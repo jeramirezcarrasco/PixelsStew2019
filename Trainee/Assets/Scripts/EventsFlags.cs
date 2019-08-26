@@ -10,6 +10,7 @@ public class EventsFlags : MonoBehaviour
     public Dictionary<string, GameObject> gameComponentDictionary;
     private void Start()
     {
+        Debug.Log("STARTT");
         gameComponentDictionary = new Dictionary<string, GameObject>();
         for (int i = 0; i < gameComponents.Length; i++)
         {
@@ -28,6 +29,8 @@ public class EventsFlags : MonoBehaviour
 
     private void OnDisable()
     {
+        Debug.Log("aaaaaaaaaaaaaaaa");
+
         EventManager.StopListening("Milk1_1", Milk1_1);
         EventManager.StopListening("Milk1_2", Milk1_2);
         EventManager.StopListening("Milk1_3", Milk1_3);
@@ -37,6 +40,7 @@ public class EventsFlags : MonoBehaviour
 
     void Milk1_1()
     {
+        Debug.Log("INCREMNETAL");
         GameObject thisObject = null;
         if (gameComponentDictionary.TryGetValue("Milk1_1", out thisObject))
         {

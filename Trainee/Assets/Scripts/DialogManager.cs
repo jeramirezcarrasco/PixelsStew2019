@@ -10,24 +10,40 @@ public class DialogManager : MonoBehaviour
     public Text nameNpc;
     public Text sentenceBox;
     private DialogScriptableObject Dialog;
-    private FadeIn fadeIn;
-    private FadeOut fadeOut;
+    private FadeInUI fadeInUI;
+    private FadeOutUI fadeOutUI;
+    private CameraZoom cameraZoom;
     public GameObject DialogButton;
+    bool nextSentenceActive = false;
+    bool firstZoom = true;
+    [SerializeField] GameObject Player;
 
     void Start()
     {
-        fadeIn = gameObject.GetComponent<FadeIn>();
-        fadeOut = gameObject.GetComponent<FadeOut>();
+        fadeInUI = gameObject.GetComponent<FadeInUI>();
+        fadeOutUI = gameObject.GetComponent<FadeOutUI>();
+        cameraZoom = gameObject.GetComponent<CameraZoom>();
+        Player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown("e") && nextSentenceActive)
+        {
+            DisplayNextSentence();
+        }
     }
 
     public void StartDialog(DialogScriptableObject dialogScriptableObject)
     {
+        Player.GetComponent<PlayerBehavior>().enabled = false;
         StopAllCoroutines();
-        DialogButton.SetActive(true);
+        nextSentenceActive = true;
+        DialogButton.SetActive(nextSentenceActive);
         Dialog = dialogScriptableObject;
-        fadeIn.StartFadeing();
-        nameNpc.text = Dialog.npcName;
+        fadeInUI.StartFadeingUI();
         StartCoroutine(TypeSentence(Dialog.textDialog));
+        cameraZoom.StartNewZoom();
     }
 
     public void DisplayNextSentence()
@@ -48,7 +64,12 @@ public class DialogManager : MonoBehaviour
 
     IEnumerator TypeSentence(string Sentence)
     {
-        Debug.Log(Sentence);
+        if (firstZoom)
+        {
+            yield return new WaitForSeconds(1.5f);
+            firstZoom = false;
+        }
+        nameNpc.text = Dialog.npcName;
         yield return new WaitForSeconds(0.1f);
         sentenceBox.text = "";
         foreach (char letter in Sentence.ToCharArray())
@@ -62,12 +83,21 @@ public class DialogManager : MonoBehaviour
     {
         sentenceBox.text = "";
         nameNpc.text = "";
-        fadeOut.StartFadeing();
-        DialogButton.SetActive(false);
+        fadeOutUI.StartFadeingUI();
+        nextSentenceActive = false;
+        DialogButton.SetActive(nextSentenceActive);
+        Debug.Log(Dialog.EventTrigger);
         EventManager.TriggerEvent(Dialog.EventTrigger);
         StopAllCoroutines();
+        cameraZoom.StartOriginalZoom();
+        firstZoom = true;
+        Player.GetComponent<PlayerBehavior>().enabled = true;
 
+    }
 
+    IEnumerator WaitForSeconds()
+    {
+        yield return new WaitForSeconds(1);
     }
 
 

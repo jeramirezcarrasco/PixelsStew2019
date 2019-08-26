@@ -45,3 +45,27 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Tracks
+    uniqueID: 3099840309
+    locked: 0
+  - name: TrainParts(Wheels)
+    uniqueID: 380382691
+    locked: 0
+  - name: TrainParts(Pistons)
+    uniqueID: 3888988389
+    locked: 0
+  - name: TrainWall
+    uniqueID: 1170828835
+    locked: 0
+  - name: Inside Objects
+    uniqueID: 359570027
+    locked: 0
+  - name: OuterWall
+    uniqueID: 2313597443
+    locked: 0
+  - name: Animals
+    uniqueID: 2768059221
+    locked: 0
+  - name: Player
+    uniqueID: 1737213835
+    locked: 0
