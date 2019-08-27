@@ -71,10 +71,11 @@ public class Grab : MonoBehaviour
 
     private void OwnItem()
     {
-        _item.gameObject.transform.parent = gameObject.transform;
+        //_item.gameObject.transform.parent = gameObject.transform;
         _item.body.gravityScale = 0;
         b_holding = true;
         _locked = true;
+        
     }
 
     public void DropItem()

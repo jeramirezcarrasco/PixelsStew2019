@@ -70,6 +70,8 @@ public class EventManager : MonoBehaviour
         UnityEvent thisEvent = null;
         if (instance.eventDictionary.TryGetValue(eventName, out thisEvent))
         {
+            Debug.Log(eventName);
+
             thisEvent.Invoke();
         }
     }

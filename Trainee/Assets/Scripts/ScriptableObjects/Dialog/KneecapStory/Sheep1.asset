@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05a4373b90e00fe488338171c330c3c1, type: 3}
-  m_Name: RC diaryorpassport 0.19
+  m_Name: Sheep1
   m_EditorClassIdentifier: 
-  npcName: Zoey
-  textDialog: My stop is soon, what do you think I should do?
-  nextSentences: []
+  npcName: BEAU PEEP
+  textDialog: Oh lawd it doesnt work
+  nextSentences:
+  - {fileID: 11400000, guid: 0116fba9c18f6ac448ac83532ff122c3, type: 2}
   EventTrigger: 

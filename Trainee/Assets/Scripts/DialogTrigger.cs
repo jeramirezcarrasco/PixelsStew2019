@@ -15,7 +15,6 @@ public class DialogTrigger : MonoBehaviour
         {
             if (activated && !bussy)
             {
-                Debug.Log("CLick");
                 FindObjectOfType<DialogManager>().StartDialog(dialogObject[index]);
                 bussy = true;
             }
@@ -24,6 +23,7 @@ public class DialogTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
+        FindObjectOfType<DialogManager>().StartDialog(dialogObject[index]);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -86,12 +86,11 @@ public class DialogManager : MonoBehaviour
         fadeOutUI.StartFadeingUI();
         nextSentenceActive = false;
         DialogButton.SetActive(nextSentenceActive);
-        Debug.Log(Dialog.EventTrigger);
+        Player.GetComponent<PlayerBehavior>().enabled = true;
         EventManager.TriggerEvent(Dialog.EventTrigger);
         StopAllCoroutines();
         cameraZoom.StartOriginalZoom();
         firstZoom = true;
-        Player.GetComponent<PlayerBehavior>().enabled = true;
 
     }
 
