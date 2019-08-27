@@ -18,12 +18,10 @@ public class ShaderBehavior : MonoBehaviour
     public void OnPointerEnter()
     {
         _shaderMaterial.SetFloat("_shaderRunCheck",1f);
-        Debug.Log("IN");
     }
 
     public void OnPointerExit()
     {
         _shaderMaterial.SetFloat("_shaderRunCheck", 0f);
-        Debug.Log("OUT");
     }
 }
