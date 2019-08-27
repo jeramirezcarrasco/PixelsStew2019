@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05a4373b90e00fe488338171c330c3c1, type: 3}
-  m_Name: RC SummerFall and Zoey Kitten 0.27
+  m_Name: US If Talk 0.20
   m_EditorClassIdentifier: 
-  npcName: Zoey Kitten
-  textDialog: I think being comfortable suits me.
+  npcName: Unshorn Sheep
+  textDialog: "Ewe know how like, money\u2019s not everything?"
   nextSentences:
-  - {fileID: 11400000, guid: 0ad842e911b54c846977709f3da543bc, type: 2}
+  - {fileID: 11400000, guid: da69b13c9a25d6243bda174ef15e9f0e, type: 2}
   EventTrigger: 

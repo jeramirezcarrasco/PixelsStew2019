@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05a4373b90e00fe488338171c330c3c1, type: 3}
-  m_Name: RC SummerFall and Zoey Kitten 0.27
+  m_Name: US Items - Baasport 0.27
   m_EditorClassIdentifier: 
-  npcName: Zoey Kitten
-  textDialog: I think being comfortable suits me.
+  npcName: Beau Peep
+  textDialog: Except, I guess if you sheer it.
   nextSentences:
-  - {fileID: 11400000, guid: 0ad842e911b54c846977709f3da543bc, type: 2}
+  - {fileID: 11400000, guid: 442d2996ac4ced9438ba0f0d2f1a5a78, type: 2}
   EventTrigger: 

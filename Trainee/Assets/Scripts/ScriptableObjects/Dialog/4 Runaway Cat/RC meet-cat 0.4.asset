@@ -15,5 +15,5 @@ MonoBehaviour:
   npcName: Executive Trainee
   textDialog: Are you sure?
   nextSentences:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 3fc441258bd09314790709d341b0c5ff, type: 2}
   EventTrigger: 

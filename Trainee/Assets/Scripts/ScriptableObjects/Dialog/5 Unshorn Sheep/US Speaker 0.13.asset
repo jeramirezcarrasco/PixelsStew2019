@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05a4373b90e00fe488338171c330c3c1, type: 3}
-  m_Name: RC SummerFall and Zoey Kitten 0.27
+  m_Name: US Speaker 0.13
   m_EditorClassIdentifier: 
-  npcName: Zoey Kitten
-  textDialog: I think being comfortable suits me.
+  npcName: Unshorn Sheep
+  textDialog: "Like, it\u2019s a lot of emotional baggage, ewe know?"
   nextSentences:
-  - {fileID: 11400000, guid: 0ad842e911b54c846977709f3da543bc, type: 2}
+  - {fileID: 11400000, guid: 76b4b38ae55180748b01aec8e9e74708, type: 2}
   EventTrigger: 

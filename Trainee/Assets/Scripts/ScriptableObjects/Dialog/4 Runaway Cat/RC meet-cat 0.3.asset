@@ -15,5 +15,5 @@ MonoBehaviour:
   npcName: Runaway Cat
   textDialog: This ticket is not right!!
   nextSentences:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 357dfe0f0d8182544b98748ff0ca4d24, type: 2}
   EventTrigger: 
