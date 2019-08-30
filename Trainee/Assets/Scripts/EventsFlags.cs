@@ -42,7 +42,7 @@ public class EventsFlags : MonoBehaviour
     {
         Debug.Log("Tutorial1");
         GameObject thisObject = null;
-        if (gameComponentDictionary.TryGetValue("Tutorial1", out thisObject))
+        if (gameComponentDictionary.TryGetValue("BranchManeger", out thisObject))
         {
             thisObject.GetComponent<DialogTrigger>().IncrementIndex();
             thisObject.transform.GetChild(2).gameObject.SetActive(true);
@@ -53,7 +53,7 @@ public class EventsFlags : MonoBehaviour
     {
         Debug.Log("Tutorial2");
         GameObject thisObject = null;
-        if (gameComponentDictionary.TryGetValue("Tutorial2", out thisObject))
+        if (gameComponentDictionary.TryGetValue("BranchManeger", out thisObject))
         {
             thisObject.transform.GetChild(1).gameObject.SetActive(true);
             thisObject.GetComponent<DialogTrigger>().TriggerDialogue();
@@ -64,7 +64,7 @@ public class EventsFlags : MonoBehaviour
     {
         Debug.Log("Tutorial3");
         GameObject thisObject = null;
-        if (gameComponentDictionary.TryGetValue("Tutorial3", out thisObject))
+        if (gameComponentDictionary.TryGetValue("BranchManeger", out thisObject))
         {
             thisObject.transform.GetChild(4).gameObject.SetActive(false);
             player.transform.GetChild(0).gameObject.SetActive(true);
@@ -79,7 +79,7 @@ public class EventsFlags : MonoBehaviour
         GameObject thisObject = null;
         Debug.Log("Sheep1");
 
-        if (gameComponentDictionary.TryGetValue("Sheep1", out thisObject))
+        if (gameComponentDictionary.TryGetValue("Sheep", out thisObject))
         {
 
             thisObject.transform.GetChild(0).gameObject.SetActive(true);
