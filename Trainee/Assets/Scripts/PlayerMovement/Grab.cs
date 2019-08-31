@@ -9,9 +9,14 @@ public class Grab : MonoBehaviour
     public a_pickupItem _item;
     private bool _locked;
     [SerializeField] Transform _holdspot;
-
+    Vector2 m_colsize;
     public LayerMask m_LayerMask;
 
+    private void Awake()
+    {
+        //Consider making a method to set the size once again every time the size of the monkey's collider changes
+        m_colsize = gameObject.GetComponent<BoxCollider2D>().size;
+    }
     public string retrieveItemID()
     {
         if (_item != null)
@@ -28,7 +33,7 @@ public class Grab : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && b_holding == false)
         {
-            Collider2D[] hitcolliders2d = Physics2D.OverlapBoxAll(gameObject.transform.position, transform.localScale * 2, 0.0f, m_LayerMask);
+            Collider2D[] hitcolliders2d = Physics2D.OverlapBoxAll(gameObject.transform.position, m_colsize, 0.0f, m_LayerMask);
 
             float distance = 999;
 
@@ -75,7 +80,7 @@ public class Grab : MonoBehaviour
         _item.body.gravityScale = 0;
         b_holding = true;
         _locked = true;
-        
+
     }
 
     public void DropItem()
