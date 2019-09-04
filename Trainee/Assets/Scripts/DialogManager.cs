@@ -16,6 +16,7 @@ public class DialogManager : MonoBehaviour
     public GameObject DialogButton;
     bool nextSentenceActive = false;
     bool firstZoom = true;
+    bool writing = false;
     [SerializeField] GameObject Player;
 
     void Start()
@@ -30,7 +31,10 @@ public class DialogManager : MonoBehaviour
     {
         if (Input.GetKeyDown("e") && nextSentenceActive)
         {
-            DisplayNextSentence();
+            if (writing)
+                writing = false;
+            else
+                DisplayNextSentence();
         }
     }
 
@@ -64,19 +68,27 @@ public class DialogManager : MonoBehaviour
 
     IEnumerator TypeSentence(string Sentence)
     {
+        writing = true;
         if (firstZoom)
         {
             yield return new WaitForSeconds(1.5f);
             firstZoom = false;
         }
+        
         nameNpc.text = Dialog.npcName;
         yield return new WaitForSeconds(0.1f);
         sentenceBox.text = "";
         foreach (char letter in Sentence.ToCharArray())
         {
+            if (writing = false)
+            {
+                sentenceBox.text = Sentence;
+                break;
+            }
             sentenceBox.text += letter;
             yield return new WaitForSeconds(0.05f);
         }
+        writing = false;
     }
 
     private void EndDialod()
