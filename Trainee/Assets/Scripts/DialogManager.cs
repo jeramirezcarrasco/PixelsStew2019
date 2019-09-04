@@ -16,7 +16,7 @@ public class DialogManager : MonoBehaviour
     public GameObject DialogButton;
     bool nextSentenceActive = false;
     bool firstZoom = true;
-    bool writing = false;
+    public bool writing = false;
     [SerializeField] GameObject Player;
 
     void Start()
@@ -80,7 +80,7 @@ public class DialogManager : MonoBehaviour
         sentenceBox.text = "";
         foreach (char letter in Sentence.ToCharArray())
         {
-            if (writing = false)
+            if (writing == false)
             {
                 sentenceBox.text = Sentence;
                 break;
